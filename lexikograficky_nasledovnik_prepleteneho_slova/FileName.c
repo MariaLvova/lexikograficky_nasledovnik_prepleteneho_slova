@@ -12,6 +12,14 @@ void zadat_slovo(char** slovo) {
     strcpy(*slovo, temp); 
 }
 
+void usporiadaj_slova(char** slova, int pocet) {
+    for (int i = 0; i < pocet - 1; i++) {
+        for (int j = i + 1; j < pocet; j++) {
+            
+        }
+    }
+}
+
 int main() {
     char** slova;
     int pocet_slov = 0;
