@@ -43,7 +43,8 @@ int porovnaj_lexikograficky(const char* slovo1, int dlzka1, const char* slovo2, 
 void usporiadaj_slova(char** slova, int pocet) {
     for (int i = 0; i < pocet - 1; i++) {
         for (int j = i + 1; j < pocet; j++) {
-            
+            if (porovnaj_lexikograficky(slova[i], dlzka_slova(slova[i]), slova[j], dlzka_slova(slova[j])) > 0) {
+            }
         }
     }
 }
