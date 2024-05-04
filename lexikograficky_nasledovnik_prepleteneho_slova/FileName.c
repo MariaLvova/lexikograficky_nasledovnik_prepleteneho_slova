@@ -70,7 +70,7 @@ int main() {
     char** slova;
     int pocet_slov = 0;
 
-    printf("Zadajte pocet slov");
+    printf("Zadajte pocet slov\t");
     scanf("%d", &pocet_slov);
 
     slova = (char**)malloc((pocet_slov + 1) * sizeof(char*)); 
@@ -80,4 +80,10 @@ int main() {
     }
 
     slova[pocet_slov] = NULL;
+
+    printf("Slova:\n");
+    for (int i = 0; i < pocet_slov; i++) {
+        printf("%s\n", slova[i]);
+    }
+
 }
