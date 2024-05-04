@@ -39,6 +39,15 @@ int porovnaj_lexikograficky(const char* slovo1, int dlzka1, const char* slovo2, 
         }
         i++;
     }
+     if (dlzka1 < dlzka2) {
+         return -1; 
+     }
+     else if (dlzka1 > dlzka2) {
+         return 1; 
+     }
+     else {
+         return 0; 
+     }
 }
 
 void vymen_slova(char** slova, int i, int j) {
