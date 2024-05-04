@@ -93,4 +93,10 @@ int main() {
         printf("%s\n", slova[i]);
     }
 
+    for (int i = 0; i < pocet_slov; i++) {
+        free(slova[i]);
+    }
+    free(slova); 
+
+    return 0;
 }
