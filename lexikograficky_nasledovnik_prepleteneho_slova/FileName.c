@@ -12,6 +12,13 @@ void zadat_slovo(char** slovo) {
     strcpy(*slovo, temp); 
 }
 
+char prevod_na_male_pismena(char slovo) {
+    if (slovo >= 'A' && slovo <= 'Z') {
+        return slovo + ('a' - 'A');
+    }
+    return slovo;
+}
+
 int porovnaj_lexikograficky(const char* slovo1, int dlzka1, const char* slovo2, int dlzka2) {
     int i = 0;
 
