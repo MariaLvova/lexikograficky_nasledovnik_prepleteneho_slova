@@ -86,4 +86,11 @@ int main() {
         printf("%s\n", slova[i]);
     }
 
+    usporiadaj_slova(slova, pocet_slov);
+
+    printf("Usporiadane slova:\n");
+    for (int i = 0; i < pocet_slov; i++) {
+        printf("%s\n", slova[i]);
+    }
+
 }
