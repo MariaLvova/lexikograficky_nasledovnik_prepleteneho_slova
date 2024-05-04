@@ -25,6 +25,7 @@ int dlzka_slova(const char* slovo) {
         dlzka++;
     }
     return dlzka;
+}
 
 int porovnaj_lexikograficky(const char* slovo1, int dlzka1, const char* slovo2, int dlzka2) {
     int i = 0;
@@ -40,10 +41,17 @@ int porovnaj_lexikograficky(const char* slovo1, int dlzka1, const char* slovo2, 
     }
 }
 
+void vymen_slova(char** slova, int i, int j) {
+    char* temp = slova[i];
+    slova[i] = slova[j];
+    slova[j] = temp;
+}
+
 void usporiadaj_slova(char** slova, int pocet) {
     for (int i = 0; i < pocet - 1; i++) {
         for (int j = i + 1; j < pocet; j++) {
             if (porovnaj_lexikograficky(slova[i], dlzka_slova(slova[i]), slova[j], dlzka_slova(slova[j])) > 0) {
+                vymen_slova(slova, i, j);
             }
         }
     }
