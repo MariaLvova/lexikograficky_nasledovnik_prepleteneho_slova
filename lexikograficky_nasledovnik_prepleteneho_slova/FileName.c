@@ -19,6 +19,13 @@ char prevod_na_male_pismena(char slovo) {
     return slovo;
 }
 
+int dlzka_slova(const char* slovo) {
+    int dlzka = 0;
+    while (slovo[dlzka] != '\0') {
+        dlzka++;
+    }
+    return dlzka;
+
 int porovnaj_lexikograficky(const char* slovo1, int dlzka1, const char* slovo2, int dlzka2) {
     int i = 0;
 
